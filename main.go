@@ -1,10 +1,10 @@
 package main
 
 import (
+	"go_bigbiy/handlers"
+	"go_bigbiy/util"
 	"net/http"
-	"bigbiy_web/handlers"
 	_ "github.com/go-sql-driver/mysql"
-	"bigbiy_web/util"
 	"flag"
 	"fmt"
 )

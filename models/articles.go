@@ -7,3 +7,9 @@ type Article struct {
 	Info     string
 	Img     string
 }
+
+
+type One_content struct {
+	Type int
+	Text string
+}

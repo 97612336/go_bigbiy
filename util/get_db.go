@@ -7,7 +7,7 @@ import (
 	"log"
 	"os/user"
 	"fmt"
-	"bigbiy_web/models"
+	"go_bigbiy/models"
 	"github.com/garyburd/redigo/redis"
 	_ "github.com/go-sql-driver/mysql"
 	"time"

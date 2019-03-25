@@ -19,4 +19,4 @@ var Static_href = "http://140.143.224.74:3456/"
 var Local_href = "http://127.0.0.1:3456/"
 
 // 模板目录
-var Template_path = util.Get_home_path() + "/Templates/www_bigbiy/three/"
+var Template_path = util.Get_home_path() + "/Templates/go_bigbiy/one/"

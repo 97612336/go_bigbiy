@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="{{.hot_words}}">
+    <meta name="description" content="{{.hot_words}}">
+    <meta name="google-site-verification" content="sO9w86v_cAlWn5iS9clvGeI3GT2iOAR8nWduRwHI4mw" />
+    <meta name="baidu-site-verification" content="1vwkO2wUAH" />
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>{{.hot_words}}</title>
+    <!--适配移动端-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1149915323323926",
+    enable_page_level_ads: true
+  });
+</script>
+
+</head>
+
+<body>
+    <div style="display:none;">
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1275056764'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1275056764%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+    </div>
+    <!-- 正文部分 -->
+    <div class="container">
+        <h3>{{.chapter_name}}</h3>
+        <hr>
+        {{range .text}}
+        <p class="lead">{{.}}</p>
+        {{end}}
+        <hr>
+        <!-- 翻页部分 -->
+        <a href="/chapter_detail_v2?chapter_id={{.per_id}}&book_id={{.book_id}}" type="button" class="btn btn-default {{if eq .has_per 0}}disabled{{end}}">上一章</a>
+        <a href="/novel_detail_v2?book_id={{.book_id}}" type="button" class="btn btn-default">返回目录</a>
+        <a href="/chapter_detail_v2?chapter_id={{.next_id}}&book_id={{.book_id}}" type="button" class="btn btn-default {{if eq .has_next 0}}disabled{{end}}">下一章</a>
+        <hr>
+    </div>
+</body>
+
+</html>
